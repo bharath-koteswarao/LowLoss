@@ -46,13 +46,15 @@
                         android:gravity="center"/>
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="60dp"
                         android:padding="10dp">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:padding="10dp"
-                            android:background="@drawable/progress_border"
+                            android:background="@color/colorAccent"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
                             android:text="REFRIGIRATOR"/>
                         <ProgressBar
                             android:id="@+id/firstBar"
