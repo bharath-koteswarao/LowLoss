@@ -9,10 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:textSize="15dp"
+        android:id="@+id/applianceName"
         android:hint="TYPE OF APPLIANCE"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="15dp"
         android:hint="NUMBER OF APPLIANCES "/>
 </LinearLayout>

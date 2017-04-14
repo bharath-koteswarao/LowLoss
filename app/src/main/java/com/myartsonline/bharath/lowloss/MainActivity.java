@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.myartsonline.bharath.lowloss.Dialogs.AddAppliance;
 import com.myartsonline.bharath.lowloss.RewardsRecyclerView.Data;
 import com.myartsonline.bharath.lowloss.RewardsRecyclerView.MyAdapter;
 
@@ -68,7 +69,8 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "fab", Toast.LENGTH_SHORT).show();
+                AddAppliance dialog=new AddAppliance();
+                dialog.show(getFragmentManager(),"dialog");
             }
         });
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
