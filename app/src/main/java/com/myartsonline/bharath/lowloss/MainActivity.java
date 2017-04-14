@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.widget.CalendarView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.myartsonline.bharath.lowloss.RewardsRecyclerView.Data;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     LinearLayout home,calendar,rewards,help;
     CalendarView calendarView;
     RecyclerView rewardsRecView;
+    ProgressBar bar;
     Data d;
     MyAdapter adapter;
     @Override
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity
         help=(LinearLayout)findViewById(R.id.helpLayout);
         calendarView=(CalendarView)findViewById(R.id.calendarView);
         rewardsRecView=(RecyclerView)findViewById(R.id.rewardsRecView);
+        bar=(ProgressBar)findViewById(R.id.firstBar);
+        bar.setScaleY(7f);
+        bar.setProgress(70);
         d=new Data(this);
         adapter=new MyAdapter(d.getList(),this);
         rewardsRecView.setLayoutManager(new LinearLayoutManager(rewardsRecView.getContext()));
