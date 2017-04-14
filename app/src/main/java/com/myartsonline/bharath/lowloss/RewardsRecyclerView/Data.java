@@ -45,7 +45,6 @@ public class Data {
                                     if (j == 1) {
                                         name.add(arr.getString(0));
                                     } else {
-                                        Log.d("See this", i + " " + j);
                                         score.add(arr.getString(1));
                                     }
                                 }
@@ -61,12 +60,10 @@ public class Data {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("See this", error.toString());
                 queue.stop();
             }
         });
         queue.add(request);
-        Log.d("Size is this ", name.size() + "");
     }
 
     public List<ListItem> getList() {

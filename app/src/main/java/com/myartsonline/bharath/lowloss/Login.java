@@ -31,32 +31,32 @@ public class Login extends AppCompatActivity {
         loginButton=(Button)findViewById(R.id.loginButton);
         et1=(EditText)findViewById(R.id.usernameEt);
         et2=(EditText)findViewById(R.id.passwordEt);
-        username=et1.getText().toString();
-        password=et2.getText().toString();
     }
 
     public void signIn(View view) {
         loginButton.setText("SIGNING IN");
+        username=et1.getText().toString();
+        password=et2.getText().toString();
         final RequestQueue queue= Volley.newRequestQueue(this);
         StringRequest request=new StringRequest(Request.Method.POST, "http://bharath.myartsonline.com/c2c/userValidation.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(Login.this, response, Toast.LENGTH_SHORT).show();
                         if (response.equals("1"))
                         {
                             startActivity(new Intent(Login.this,MainActivity.class));
                         }
                         else {
                             Toast.makeText(Login.this, "You are not registered user", Toast.LENGTH_SHORT).show();
+                            loginButton.setText("SIGN IN");
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(Login.this, error.toString(), Toast.LENGTH_SHORT).show();
-                        Log.d("Error occured",error.toString());
+                        Toast.makeText(Login.this, "You should have an internet connection", Toast.LENGTH_SHORT).show();
+                        loginButton.setText("SIGN IN");
                         queue.stop();
                     }
                 }){
