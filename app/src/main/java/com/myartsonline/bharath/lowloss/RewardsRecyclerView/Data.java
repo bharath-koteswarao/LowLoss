@@ -33,7 +33,6 @@ public class Data {
         list = new ArrayList<>();
         name = new ArrayList<>();
         score = new ArrayList<>();
-        Toast.makeText(context, "Working", Toast.LENGTH_SHORT).show();
         final RequestQueue queue = Volley.newRequestQueue(context);
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, "http://bharath.myartsonline.com/c2c/rewards.php",
                 new Response.Listener<JSONObject>() {

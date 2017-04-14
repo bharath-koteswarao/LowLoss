@@ -1,5 +1,6 @@
 package com.myartsonline.bharath.lowloss;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity
         rewardsRecView.setAdapter(adapter);
         Data d=new Data(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
