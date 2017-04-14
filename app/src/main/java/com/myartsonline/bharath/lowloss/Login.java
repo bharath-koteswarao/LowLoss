@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -21,22 +22,34 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
     Button loginButton;
+    String username,password;
+    EditText et1,et2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         loginButton=(Button)findViewById(R.id.loginButton);
+        et1=(EditText)findViewById(R.id.usernameEt);
+        et2=(EditText)findViewById(R.id.passwordEt);
+        username=et1.getText().toString();
+        password=et2.getText().toString();
     }
 
     public void signIn(View view) {
         loginButton.setText("SIGNING IN");
-        startActivity(new Intent(this,MainActivity.class));
         final RequestQueue queue= Volley.newRequestQueue(this);
         StringRequest request=new StringRequest(Request.Method.POST, "http://bharath.myartsonline.com/c2c/userValidation.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(Login.this, response, Toast.LENGTH_SHORT).show();
+                        if (response.equals("1"))
+                        {
+                            startActivity(new Intent(Login.this,MainActivity.class));
+                        }
+                        else {
+                            Toast.makeText(Login.this, "You are not registered user", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 },
                 new Response.ErrorListener() {
@@ -50,8 +63,8 @@ public class Login extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> map=new HashMap<>();
-                map.put("username","manoj");
-                map.put("password","83");
+                map.put("username",username);
+                map.put("password",password);
                 return map;
             }
         };

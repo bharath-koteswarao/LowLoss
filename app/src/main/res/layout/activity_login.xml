@@ -14,6 +14,7 @@
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginBottom="10dp"
+        android:id="@+id/usernameEt"
         android:background="@drawable/login_backgrounds"
         android:hint="USERNAME"
         android:textColor="@android:color/white" />
@@ -21,6 +22,8 @@
     <EditText
         android:layout_width="250dp"
         android:layout_height="40dp"
+        android:id="@+id/passwordEt"
+        android:inputType="textPassword"
         android:background="@drawable/login_backgrounds"
         android:hint="PASSWORD"
         android:layout_marginBottom="20dp"
