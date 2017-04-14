@@ -4,18 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/c2c"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.myartsonline.bharath.lowloss.Login">
-    <ImageView
-        android:layout_width="match_parent"
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/login_backgrounds"
+        android:hint="USERNAME"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/login_backgrounds"
+        android:hint="PASSWORD"
+        android:layout_marginBottom="20dp"
+        android:padding="7dp" />
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</>
+        android:layout_marginTop="40dp"
+        android:id="@+id/loginButton"
+        android:padding="15dp"
+        android:background="@drawable/login_backgrounds"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="signIn"
+        android:text="SIGN IN"/>
+</LinearLayout>
