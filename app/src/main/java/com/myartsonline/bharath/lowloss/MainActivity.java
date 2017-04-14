@@ -1,11 +1,8 @@
 package com.myartsonline.bharath.lowloss;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -19,7 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CalendarView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -32,7 +28,7 @@ public class MainActivity extends AppCompatActivity
     LinearLayout home,calendar,rewards,help;
     CalendarView calendarView;
     RecyclerView rewardsRecView;
-    ProgressBar bar;
+    ProgressBar bar1,bar2,bar3,bar4;
     Data d;
     MyAdapter adapter;
     @Override
@@ -45,9 +41,21 @@ public class MainActivity extends AppCompatActivity
         help=(LinearLayout)findViewById(R.id.helpLayout);
         calendarView=(CalendarView)findViewById(R.id.calendarView);
         rewardsRecView=(RecyclerView)findViewById(R.id.rewardsRecView);
-        bar=(ProgressBar)findViewById(R.id.firstBar);
-        bar.setScaleY(7f);
-        bar.setProgress(70);
+        bar1 =(ProgressBar)findViewById(R.id.firstBar);
+        bar2 =(ProgressBar)findViewById(R.id.secondBar);
+        bar3 =(ProgressBar)findViewById(R.id.thirdBar);
+        bar4 =(ProgressBar)findViewById(R.id.fourthBar);
+        bar1.setScaleY(7f);
+        bar1.setProgress(70);
+        bar2 =(ProgressBar)findViewById(R.id.secondBar);
+        bar2.setScaleY(7f);
+        bar2.setProgress(70);
+        bar3 =(ProgressBar)findViewById(R.id.thirdBar);
+        bar3.setScaleY(7f);
+        bar3.setProgress(70);
+        bar4 =(ProgressBar)findViewById(R.id.fourthBar);
+        bar4.setScaleY(7f);
+        bar4.setProgress(70);
         d=new Data(this);
         adapter=new MyAdapter(d.getList(),this);
         rewardsRecView.setLayoutManager(new LinearLayoutManager(rewardsRecView.getContext()));
@@ -91,7 +99,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflate the menu; this adds items to the action bar1 if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }

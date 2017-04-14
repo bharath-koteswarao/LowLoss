@@ -36,7 +36,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:text="CONNECTED DEVICES"
                         android:textStyle="bold"
                         android:layout_gravity="center"
@@ -58,6 +57,69 @@
                             android:text="REFRIGIRATOR"/>
                         <ProgressBar
                             android:id="@+id/firstBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="300dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:background="@color/colorAccent"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:text="TELEVISION"/>
+                        <ProgressBar
+                            android:id="@+id/secondBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="300dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:background="@color/colorAccent"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:text="WASHING MACHINE"/>
+                        <ProgressBar
+                            android:id="@+id/thirdBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="300dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:background="@color/colorAccent"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:text="AC"/>
+                        <ProgressBar
+                            android:id="@+id/fourthBar"
                             style="?android:attr/progressBarStyleHorizontal"
                             android:layout_width="300dp"
                             android:layout_height="20dp"
