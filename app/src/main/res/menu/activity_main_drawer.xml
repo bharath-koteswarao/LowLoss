@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_calendar_white_24dp"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_rewards"
+            android:icon="@drawable/ic_card_reward_black_24dp"
+            android:title="Rewards" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="About" />
+    </group>
+</menu>
